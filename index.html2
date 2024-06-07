@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maricela's - Authentic Mexican Food & Bakery</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff9900; /* Orange background */
+            color: #ffffff; /* White text */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            position: relative; /* Needed for logo positioning */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 36px;
+            font-weight: normal;
+            color: #ffffff; /* White text */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #ffffff; /* White text */
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth transition effect */
+        }
+        nav ul li a:hover {
+            color: #ffcc00; /* Yellow text on hover */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #003366; /* Dark blue header background */
+            color: #ffffff; /* White text */
+            padding: 20px 0;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-image: url('hero-background.jpg'); /* Hero background image */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Yellow text */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 0;
+            color: #ffffff; /* White text */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
+        }
+
+        /* Menu section styles */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        .menu-item {
+            background-color: #003366; /* Dark blue menu item background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            text-align: center;
+        }
+        .menu-item h3 {
+            margin-top: 0;
+            color: #ffffff; /* White text */
+        }
+        .menu-item p {
+            margin-bottom: 0;
+            color: #ffffff; /* White text */
+        }
+
+        /* Gallery section styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Contact section styles */
+        .contact-form {
+            background-color: #003366; /* Dark blue contact form background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff; /* White text */
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #ffffff; /* White background */
+            color: #333333; /* Dark gray text */
+        }
+        .btn-primary {
+            background-color: #ffcc00; /* Yellow button background */
+            color: #003366; /* Dark blue text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s; /* Smooth transition effect */
+        }
+        .btn-primary:hover {
+            background-color: #ffff66; /* Lighter yellow button background on hover */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #003366; /* Dark blue footer background */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Logo styles */
+        .logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999; /* Ensures logo stays on top of other elements */
+            width: 50px;
+            height: 50px;
+            background-image: url('mexican-logo.png'); /* Mexican logo */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><img src="mexican-logo.png" alt="Maricela's" style="height: 50px; vertical-align: middle;"> Maricela's</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Authentic Mexican Food & Bakery</h2>
+            <p>Indulge in the rich flavors of Mexico</p>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Tacos al Pastor</h3>
+                    <p>Marinated pork tacos</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Mole Poblano</h3>
+                    <p>Chicken in rich chocolate-chili sauce</p>
+                </div>
+                <!-- Add more menu items here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="taco.jpg" alt="Taco"> <!-- Placeholder image, replace with actual images -->
+                <img src="mole.jpg" alt="Mole Poblano"> <!-- Placeholder image, replace with actual images -->
+                <!-- Add more gallery images here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to place an order, feel free to get in touch.</p>
+            <form action="submit.php" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Maricela's is dedicated to serving authentic Mexican cuisine made with the freshest ingredients. With our rich culinary heritage, we bring the flavors of Mexico to your table.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Maricela's. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Logo -->
+    <div class="logo"></div>
+</body>
+</html>
