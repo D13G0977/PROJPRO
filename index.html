@@ -1,3 +1,5 @@
+
+Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            color: yellow; /* Changed text color to yellow */
+            color: #808080; /* Changed text color to grey */
             margin: 0;
             padding: 0;
         }
@@ -39,7 +41,7 @@
             margin-right: 20px;
         }
         nav ul li a {
-            color: yellow; /* Changed text color to yellow */
+            color: #808080; /* Changed text color to grey */
             text-decoration: none;
         }
         .hero {
@@ -53,10 +55,14 @@
         .hero h2 {
             font-size: 48px;
             margin-bottom: 20px;
+            color: yellow; /* Changed text color to yellow */
+            font-weight: bold; /* Added font-weight bold */
         }
         .hero p {
             font-size: 20px;
             margin-bottom: 0;
+            color: yellow; /* Changed text color to yellow */
+            font-weight: bold; /* Added font-weight bold */
         }
         .services-grid {
             display: flex;
@@ -150,8 +156,7 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#faqs">FAQs</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#career">Career Opportunities</a></li> <!-- Added Career Opportunities link -->
+                    <li><a href="career.html">Career Opportunities</a></li> <!-- Link to separate Career Opportunities page -->
                 </ul>
             </nav>
         </div>
@@ -185,7 +190,7 @@
                     <p>Bring your vision to life with our custom home building services.</p>
                 </div>
                 <div class="service">
-                    <h3>Plumbing Work</h3> <!-- Added Plumbing Work -->
+                    <h3>Plumbing Work</h3>
                     <p>Professional plumbing services for your home.</p>
                 </div>
             </div>
@@ -254,7 +259,11 @@
     <section id="blog">
         <div class="container">
             <h2>Our Blog</h2>
-            <!-- Add your blog posts here -->
+            <p>Check out our latest blog post:</p>
+            <strong>
+                <p>Top 10 Home Improvement Trends of 2024</p>
+            </strong>
+            <p>Stay tuned for more updates!</p>
         </div>
     </section>
 
@@ -269,20 +278,6 @@
         <div class="container">
             <h2>Our Projects</h2>
             <!-- Showcase your recent projects with details -->
-        </div>
-    </section>
-
-    <section id="career"> <!-- Added Career Opportunities section -->
-        <div class="container">
-            <h2>Career Opportunities</h2>
-            <p>We're currently hiring for the following positions:</p>
-            <ul>
-                <li>General Contractor</li>
-                <li>Interior Designer</li>
-                <li>Construction Worker</li>
-                <li>Plumber</li> <!-- Added Plumber position -->
-            </ul>
-            <p>If you're interested in joining our team, please send your resume to careers@projectpro.com</p>
         </div>
     </section>
 
