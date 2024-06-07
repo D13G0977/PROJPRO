@@ -5,155 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Pro - Home Improvement Experts</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
     <style>
         body {
-            background-color: black;
-            color: yellow;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Project Pro</h1>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#estimate" class="btn-primary">Get a Free Estimate</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#faqs">FAQs</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero">
-        <div class="container">
-            <h2>Your Trusted Partner in Home Improvement</h2>
-            <p>Transforming your house into your dream home</p>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <h3>Remodeling</h3>
-                    <p>From kitchens to bathrooms, we can transform any space.</p>
-                </div>
-                <div class="service">
-                    <h3>Renovations</h3>
-                    <p>Upgrade your home with our expert renovation services.</p>
-                </div>
-                <div class="service">
-                    <h3>Repairs</h3>
-                    <p>We'll fix any issues and restore your home to perfection.</p>
-                </div>
-                <div class="service">
-                    <h3>Custom Builds</h3>
-                    <p>Bring your vision to life with our custom home building services.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery">
-        <div class="container">
-            <h2>Our Work</h2>
-            <div class="gallery-grid">
-                <img src="remodeling.jpg" alt="Remodeling Example">
-                <img src="renovations.jpg" alt="Renovations Example">
-                <img src="repairs.jpg" alt="Repairs Example">
-                <img src="custom_builds.jpg" alt="Custom Builds Example">
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial">
-                <blockquote>"Project Pro exceeded my expectations. Their attention to detail and professionalism were unmatched. I highly recommend them!"</blockquote>
-                <cite>- John Doe</cite>
-            </div>
-            <div class="testimonial">
-                <blockquote>"I couldn't be happier with the results. Project Pro turned my house into a home. Thank you!"</blockquote>
-                <cite>- Jane Smith</cite>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to request a free estimate, feel free to get in touch.</p>
-            <form action="submit.php" method="post" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Project Pro is a team of experienced professionals dedicated to providing top-quality home improvement services. With years of expertise, we take pride in delivering exceptional results that exceed our clients' expectations.</p>
-        </div>
-    </section>
-
-    <section id="blog">
-        <div class="container">
-            <h2>Our Blog</h2>
-            <!-- Add your blog posts here -->
-        </div>
-    </section>
-
-    <section id="faqs">
-        <div class="container">
-            <h2>FAQs</h2>
-            <!-- Add frequently asked questions and answers here -->
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Our Projects</h2>
-            <!-- Showcase your recent projects with details -->
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Project Pro. All rights reserved.</p>
-            <nav>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-</body>
-</html>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 36px;
+            font-weight: normal;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .hero {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .service {
+            flex: 0 0 calc(50% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            margin-botto
