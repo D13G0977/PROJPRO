@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Pro - Home Improvement Experts</title>
+    <title>Maricela's - Authentic Mexican Food & Bakery</title>
     <style>
         /* Global styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #001f3f; /* Navy blue background */
+            background-color: #ff9900; /* Orange background */
             color: #ffffff; /* White text */
             margin: 0;
             padding: 0;
@@ -24,7 +24,7 @@
             padding: 0;
             font-size: 36px;
             font-weight: normal;
-            color: #ffff00; /* Yellow text */
+            color: #ffffff; /* White text */
         }
         nav ul {
             list-style: none;
@@ -41,12 +41,12 @@
             transition: color 0.3s; /* Smooth transition effect */
         }
         nav ul li a:hover {
-            color: #ffff00; /* Yellow text on hover */
+            color: #ffcc00; /* Yellow text on hover */
         }
 
         /* Header styles */
         header {
-            background-color: #333333; /* Dark gray header background */
+            background-color: #003366; /* Dark blue header background */
             color: #ffffff; /* White text */
             padding: 20px 0;
         }
@@ -63,36 +63,35 @@
         .hero h2 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: #ffff00; /* Yellow text */
+            color: #ffcc00; /* Yellow text */
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
         }
         .hero p {
             font-size: 20px;
             margin-bottom: 0;
-            color: #ffff00; /* Yellow text */
+            color: #ffffff; /* White text */
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
         }
 
-        /* Services section styles */
-        .services-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        /* Menu section styles */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
         }
-        .service {
-            flex: 0 0 calc(50% - 20px);
-            background-color: #333333; /* Dark gray service background */
+        .menu-item {
+            background-color: #003366; /* Dark blue menu item background */
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 10px; /* Rounded corners */
+            text-align: center;
         }
-        .service h3 {
+        .menu-item h3 {
             margin-top: 0;
-            color: #ffff00; /* Yellow text */
+            color: #ffffff; /* White text */
         }
-        .service p {
+        .menu-item p {
             margin-bottom: 0;
             color: #ffffff; /* White text */
         }
@@ -108,29 +107,9 @@
             border-radius: 10px; /* Rounded corners */
         }
 
-        /* Testimonials section styles */
-        .testimonial {
-            background-color: #333333; /* Dark gray testimonial background */
-            color: #ffffff; /* White text */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px; /* Rounded corners */
-        }
-        .testimonial blockquote {
-            margin: 0;
-            padding: 0;
-            font-size: 18px;
-            font-style: italic;
-            color: #ffffff; /* White text */
-        }
-        .testimonial cite {
-            font-size: 16px;
-            color: #ffff00; /* Yellow text */
-        }
-
         /* Contact section styles */
         .contact-form {
-            background-color: #333333; /* Dark gray contact form background */
+            background-color: #003366; /* Dark blue contact form background */
             padding: 20px;
             border-radius: 10px; /* Rounded corners */
         }
@@ -152,8 +131,8 @@
             color: #333333; /* Dark gray text */
         }
         .btn-primary {
-            background-color: #ffff00; /* Yellow button background */
-            color: #333333; /* Dark gray text */
+            background-color: #ffcc00; /* Yellow button background */
+            color: #003366; /* Dark blue text */
             padding: 10px 20px;
             border: none;
             border-radius: 5px; /* Rounded corners */
@@ -162,12 +141,12 @@
             transition: background-color 0.3s; /* Smooth transition effect */
         }
         .btn-primary:hover {
-            background-color: #cccc00; /* Darker yellow button background on hover */
+            background-color: #ffff66; /* Lighter yellow button background on hover */
         }
 
         /* Footer styles */
         footer {
-            background-color: #333333; /* Dark gray footer background */
+            background-color: #003366; /* Dark blue footer background */
             color: #ffffff; /* White text */
             text-align: center;
             padding: 20px 0;
@@ -181,7 +160,7 @@
             z-index: 9999; /* Ensures logo stays on top of other elements */
             width: 50px;
             height: 50px;
-            background-image: url('hammer-and-screw.png'); /* Hammer and screw logo */
+            background-image: url('mexican-logo.png'); /* Mexican logo */
             background-size: contain;
             background-repeat: no-repeat;
         }
@@ -190,18 +169,13 @@
 <body>
     <header>
         <div class="container">
-            <h1><img src="logo.png" alt="Project Pro" style="height: 50px; vertical-align: middle;"> Project Pro</h1>
+            <h1><img src="mexican-logo.png" alt="Maricela's" style="height: 50px; vertical-align: middle;"> Maricela's</h1>
             <nav>
                 <ul>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#menu">Menu</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#our-mission">Our Mission</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#faqs">FAQs</a></li>
-                    <li><a href="career.html">Career Opportunities</a></li>
-                    <li><a href="#other-services">Other Service Recommendations</a></li>
                 </ul>
             </nav>
         </div>
@@ -209,41 +183,59 @@
 
     <section class="hero">
         <div class="container">
-            <h2>Your Trusted Partner in Home Improvement</h2>
-            <p>Transforming your house into your dream home</p>
+            <h2>Authentic Mexican Food & Bakery</h2>
+            <p>Indulge in the rich flavors of Mexico</p>
         </div>
     </section>
 
-    <section id="our-mission">
+    <section id="menu">
         <div class="container">
-            <h2>Our Mission</h2>
-            <p>At Project Pro, our mission is to provide exceptional home improvement services that exceed our clients' expectations. We strive to transform houses into dream homes by delivering top-quality craftsmanship and unparalleled customer satisfaction.</p>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <h3>Remodeling</h3>
-                    <p>From kitchens to bathrooms, we can transform any space.</p>
+            <h2>Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Tacos al Pastor</h3>
+                    <p>Marinated pork tacos</p>
                 </div>
-                <div class="service">
-                    <h3>Renovations</h3>
-                    <p>Upgrade your home with our expert renovation services.</p>
+                <div class="menu-item">
+                    <h3>Mole Poblano</h3>
+                    <p>Chicken in rich chocolate-chili sauce</p>
                 </div>
-                <div class="service">
-                    <h3>Repairs</h3>
-                    <p>We'll fix any issues and restore your home to perfection.</p>
+                <!-- Add more menu items here -->
+                <div class="menu-item">
+                    <h3>Carnitas</h3>
+                    <p>Slow-cooked pork</p>
                 </div>
-                <div class="service">
-                    <h3>Custom Builds</h3>
-                    <p>Bring your vision to life with our custom home building services.</p>
+                <div class="menu-item">
+                    <h3>Enchiladas Suizas</h3>
+                    <p>Chicken enchiladas with creamy tomatillo sauce</p>
                 </div>
-                <div class="service">
-                    <h3>Plumbing Work</h3>
-                    <p>Professional plumbing services for your home.</p>
+                <div class="menu-item">
+                    <h3>Chiles Rellenos</h3>
+                    <p>Battered and fried stuffed peppers</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Pozole</h3>
+                    <p>Traditional hominy soup</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tamales</h3>
+                    <p>Corn dough filled with meat and steamed in a corn husk</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Chilaquiles</h3>
+                    <p>Tortilla chips cooked in salsa and topped with cheese and cream</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Barbacoa</h3>
+                    <p>Slow-cooked beef or lamb</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Camote</h3>
+                    <p>Candied sweet potatoes</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Quesadillas</h3>
+                    <p>Cheese-filled tortillas grilled to perfection</p>
                 </div>
             </div>
         </div>
@@ -251,26 +243,11 @@
 
     <section id="gallery">
         <div class="container">
-            <h2>Our Work</h2>
+            <h2>Gallery</h2>
             <div class="gallery-grid">
-                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
-                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
-                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
-                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial">
-                <blockquote>"Project Pro exceeded my expectations. Their attention to detail and professionalism were unmatched. I highly recommend them!"</blockquote>
-                <cite>- John Doe</cite>
-            </div>
-            <div class="testimonial">
-                <blockquote>"I couldn't be happier with the results. Project Pro turned my house into a home. Thank you!"</blockquote>
-                <cite>- Jane Smith</cite>
+                <img src="taco.jpg" alt="Taco"> <!-- Placeholder image, replace with actual images -->
+                <img src="mole.jpg" alt="Mole Poblano"> <!-- Placeholder image, replace with actual images -->
+                <!-- Add more gallery images here -->
             </div>
         </div>
     </section>
@@ -278,7 +255,7 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>If you have any questions or would like to request a free estimate, feel free to get in touch.</p>
+            <p>If you have any questions or would like to place an order, feel free to get in touch.</p>
             <form action="submit.php" method="post" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -304,46 +281,13 @@
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>Project Pro is a team of experienced professionals dedicated to providing top-quality home improvement services. With years of expertise, we take pride in delivering exceptional results that exceed our clients' expectations.</p>
-        </div>
-    </section>
-
-    <section id="other-services">
-        <div class="container">
-            <h2>Other Services Recommendations</h2>
-            <p>Is the service you need not listed? Here are our trusted recommendations.</p>
-            <div class="services-grid">
-                <div class="service">
-                    <h3>Roofing</h3>
-                    <p>Contact Information:</p>
-                    <p>Email: roofing@example.com</p>
-                    <p>Phone: 123-456-7890</p>
-                </div>
-                <div class="service">
-                    <h3>Lawn Services</h3>
-                    <p>Contact Information:</p>
-                    <p>Email: lawn@example.com</p>
-                    <p>Phone: 123-456-7890</p>
-                </div>
-                <div class="service">
-                    <h3>House Cleanings</h3>
-                    <p>Contact Information:</p>
-                    <p>Email: cleaning@example.com</p>
-                    <p>Phone: 123-456-7890</p>
-                </div>
-                <div class="service">
-                    <h3>Mortgage Loans</h3>
-                    <p>Contact Information:</p>
-                    <p>Email: loans@example.com</p>
-                    <p>Phone: 123-456-7890</p>
-                </div>
-            </div>
+            <p>Maricela's is dedicated to serving authentic Mexican cuisine made with the freshest ingredients. With our rich culinary heritage, we bring the flavors of Mexico to your table.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Project Pro. All rights reserved.</p>
+            <p>&copy; 2024 Maricela's. All rights reserved.</p>
             <nav>
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
