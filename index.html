@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade's - Botox & Lip Filler Services</title>
+    <title>Project Pro - Home Improvement Experts</title>
     <style>
         /* Global styles */
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #9c9b7a; /* Sage green background */
-            color: #333333; /* Dark gray text */
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Navy blue background */
+            color: #ffffff; /* White text */
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            position: relative; /* Needed for logo positioning */
         }
         .container {
             width: 80%;
             margin: 0 auto;
         }
-        h1, h2, h3 {
-            font-family: 'Georgia', serif;
-            color: #003300; /* Dark green text */
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 36px;
+            font-weight: normal;
+            color: #ffff00; /* Yellow text */
         }
         nav ul {
             list-style: none;
@@ -32,17 +36,17 @@
             margin-right: 20px;
         }
         nav ul li a {
-            color: #003300; /* Dark green text */
+            color: #ffffff; /* White text */
             text-decoration: none;
             transition: color 0.3s; /* Smooth transition effect */
         }
         nav ul li a:hover {
-            color: #00cc99; /* Light green text on hover */
+            color: #ffff00; /* Yellow text on hover */
         }
 
         /* Header styles */
         header {
-            background-color: #003300; /* Dark green header background */
+            background-color: #333333; /* Dark gray header background */
             color: #ffffff; /* White text */
             padding: 20px 0;
         }
@@ -59,35 +63,36 @@
         .hero h2 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: #00cc99; /* Light green text */
+            color: #ffff00; /* Yellow text */
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
         }
         .hero p {
             font-size: 20px;
             margin-bottom: 0;
-            color: #ffffff; /* White text */
+            color: #ffff00; /* Yellow text */
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
         }
 
         /* Services section styles */
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        .service-item {
-            background-color: #444444; /* Dark gray service item background */
+        .service {
+            flex: 0 0 calc(50% - 20px);
+            background-color: #333333; /* Dark gray service background */
             padding: 20px;
+            margin-bottom: 20px;
             border-radius: 10px; /* Rounded corners */
-            text-align: center;
         }
-        .service-item h3 {
+        .service h3 {
             margin-top: 0;
-            color: #00cc99; /* Light green text */
+            color: #ffff00; /* Yellow text */
         }
-        .service-item p {
+        .service p {
             margin-bottom: 0;
             color: #ffffff; /* White text */
         }
@@ -103,9 +108,29 @@
             border-radius: 10px; /* Rounded corners */
         }
 
+        /* Testimonials section styles */
+        .testimonial {
+            background-color: #333333; /* Dark gray testimonial background */
+            color: #ffffff; /* White text */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px; /* Rounded corners */
+        }
+        .testimonial blockquote {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-style: italic;
+            color: #ffffff; /* White text */
+        }
+        .testimonial cite {
+            font-size: 16px;
+            color: #ffff00; /* Yellow text */
+        }
+
         /* Contact section styles */
         .contact-form {
-            background-color: #444444; /* Dark gray contact form background */
+            background-color: #333333; /* Dark gray contact form background */
             padding: 20px;
             border-radius: 10px; /* Rounded corners */
         }
@@ -127,8 +152,8 @@
             color: #333333; /* Dark gray text */
         }
         .btn-primary {
-            background-color: #00cc99; /* Light green button background */
-            color: #333333; /* Dark text */
+            background-color: #ffff00; /* Yellow button background */
+            color: #333333; /* Dark gray text */
             padding: 10px 20px;
             border: none;
             border-radius: 5px; /* Rounded corners */
@@ -137,45 +162,15 @@
             transition: background-color 0.3s; /* Smooth transition effect */
         }
         .btn-primary:hover {
-            background-color: #33ffcc; /* Lighter green button background on hover */
+            background-color: #cccc00; /* Darker yellow button background on hover */
         }
 
         /* Footer styles */
         footer {
-            background-color: #003300; /* Dark green footer background */
+            background-color: #333333; /* Dark gray footer background */
             color: #ffffff; /* White text */
             text-align: center;
             padding: 20px 0;
-        }
-
-        /* Testimonials section styles */
-        .testimonials {
-            background-color: #cccccc; /* Light gray background */
-            padding: 50px 0;
-        }
-        .testimonial-item {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff; /* White background */
-            margin: 10px;
-            border-radius: 10px; /* Rounded corners */
-        }
-        .testimonial-item p {
-            font-style: italic;
-        }
-
-        /* About section styles */
-        .about {
-            background-color: #ffffff; /* White background */
-            color: #333333; /* Dark gray text */
-            padding: 50px 0;
-        }
-        .about h2 {
-            margin-bottom: 20px;
-            color: #003300; /* Dark green text */
-        }
-        .about p {
-            margin-bottom: 20px;
         }
 
         /* Logo styles */
@@ -186,7 +181,7 @@
             z-index: 9999; /* Ensures logo stays on top of other elements */
             width: 50px;
             height: 50px;
-            background-image: url('logo.png'); /* Placeholder logo */
+            background-image: url('hammer-and-screw.png'); /* Hammer and screw logo */
             background-size: contain;
             background-repeat: no-repeat;
         }
@@ -195,14 +190,18 @@
 <body>
     <header>
         <div class="container">
-            <h1><img src="logo.png" alt="Jade's" style="height: 50px; vertical-align: middle;"> Jade's</h1>
+            <h1><img src="logo.png" alt="Project Pro" style="height: 50px; vertical-align: middle;"> Project Pro</h1>
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#our-mission">Our Mission</a></li>
                     <li><a href="#about">About Us</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="career.html">Career Opportunities</a></li>
+                    <li><a href="#other-services">Other Service Recommendations</a></li>
                 </ul>
             </nav>
         </div>
@@ -210,54 +209,41 @@
 
     <section class="hero">
         <div class="container">
-            <h2>Botox & Lip Filler Services</h2>
-            <p>Enhance your natural beauty with our expert care</p>
+            <h2>Your Trusted Partner in Home Improvement</h2>
+            <p>Transforming your house into your dream home</p>
+        </div>
+    </section>
+
+    <section id="our-mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At Project Pro, our mission is to provide exceptional home improvement services that exceed our clients' expectations. We strive to transform houses into dream homes by delivering top-quality craftsmanship and unparalleled customer satisfaction.</p>
         </div>
     </section>
 
     <section id="services">
         <div class="container">
-            <h2>Services</h2>
+            <h2>Our Services</h2>
             <div class="services-grid">
-                <div class="service-item">
-                    <h3>Botox</h3>
-                    <p>Reduce wrinkles and fine lines</p>
+                <div class="service">
+                    <h3>Remodeling</h3>
+                    <p>From kitchens to bathrooms, we can transform any space.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Lip Fillers</h3>
-                    <p>Enhance the fullness of your lips</p>
+                <div class="service">
+                    <h3>Renovations</h3>
+                    <p>Upgrade your home with our expert renovation services.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Chemical Peels</h3>
-                    <p>Improve skin texture and tone</p>
+                <div class="service">
+                    <h3>Repairs</h3>
+                    <p>We'll fix any issues and restore your home to perfection.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Dermal Fillers</h3>
-                    <p>Restore volume and smooth contours</p>
+                <div class="service">
+                    <h3>Custom Builds</h3>
+                    <p>Bring your vision to life with our custom home building services.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Microdermabrasion</h3>
-                    <p>Exfoliate and rejuvenate your skin</p>
-                </div>
-                <div class="service-item">
-                    <h3>PRP Therapy</h3>
-                    <p>Stimulate collagen production</p>
-                </div>
-                <div class="service-item">
-                    <h3>Microneedling</h3>
-                    <p>Improve skin texture and firmness</p>
-                </div>
-                <div class="service-item">
-                    <h3>Facial Contouring</h3>
-                    <p>Enhance facial features</p>
-                </div>
-                <div class="service-item">
-                    <h3>Non-Surgical Facelift</h3>
-                    <p>Tighten and lift skin without surgery</p>
-                </div>
-                <div class="service-item">
-                    <h3>Skin Tightening</h3>
-                    <p>Firm and tighten loose skin</p>
+                <div class="service">
+                    <h3>Plumbing Work</h3>
+                    <p>Professional plumbing services for your home.</p>
                 </div>
             </div>
         </div>
@@ -265,46 +251,26 @@
 
     <section id="gallery">
         <div class="container">
-            <h2>Gallery</h2>
+            <h2>Our Work</h2>
             <div class="gallery-grid">
-                <img src="botox.jpg" alt="Botox Treatment"> <!-- Placeholder image, replace with actual images -->
-                <img src="lip-fillers.jpg" alt="Lip Fillers"> <!-- Placeholder image, replace with actual images -->
-                <img src="chemical-peel.jpg" alt="Chemical Peel"> <!-- Placeholder image, replace with actual images -->
-                <img src="dermal-fillers.jpg" alt="Dermal Fillers"> <!-- Placeholder image, replace with actual images -->
-                <img src="microdermabrasion.jpg" alt="Microdermabrasion"> <!-- Placeholder image, replace with actual images -->
-                <img src="prp-therapy.jpg" alt="PRP Therapy"> <!-- Placeholder image, replace with actual images -->
-                <img src="microneedling.jpg" alt="Microneedling"> <!-- Placeholder image, replace with actual images -->
-                <img src="facial-contouring.jpg" alt="Facial Contouring"> <!-- Placeholder image, replace with actual images -->
-                <img src="non-surgical-facelift.jpg" alt="Non-Surgical Facelift"> <!-- Placeholder image, replace with actual images -->
-                <img src="skin-tightening.jpg" alt="Skin Tightening"> <!-- Placeholder image, replace with actual images -->
+                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
+                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
+                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
+                <img src="https://via.placeholder.com/300" alt="Gallery Image"> <!-- Placeholder image, replace with actual images -->
             </div>
         </div>
     </section>
 
     <section id="testimonials">
         <div class="container">
-            <h2>Testimonials</h2>
-            <div class="testimonials">
-                <div class="testimonial-item">
-                    <p>"Jade's Botox services are amazing! My skin looks younger and smoother."</p>
-                    <p>- Emma R.</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"I love my new lips! The fillers look so natural."</p>
-                    <p>- Olivia M.</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"The staff at Jade's is so professional and friendly. Highly recommend!"</p>
-                    <p>- Sarah L.</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"I've never felt more confident. The results are incredible."</p>
-                    <p>- Natalie D.</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Excellent service and fantastic results. I'll definitely be back."</p>
-                    <p>- Jessica K.</p>
-                </div>
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <blockquote>"Project Pro exceeded my expectations. Their attention to detail and professionalism were unmatched. I highly recommend them!"</blockquote>
+                <cite>- John Doe</cite>
+            </div>
+            <div class="testimonial">
+                <blockquote>"I couldn't be happier with the results. Project Pro turned my house into a home. Thank you!"</blockquote>
+                <cite>- Jane Smith</cite>
             </div>
         </div>
     </section>
@@ -312,7 +278,7 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>If you have any questions or would like to schedule an appointment, please fill out the form below.</p>
+            <p>If you have any questions or would like to request a free estimate, feel free to get in touch.</p>
             <form action="submit.php" method="post" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -338,26 +304,46 @@
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Jade's, we specialize in enhancing your natural beauty with our expert Botox and lip filler services. Our team of professionals is dedicated to providing you with personalized care and the highest quality treatments.</p>
-            <p>We believe in using the latest techniques and technologies to ensure the best possible results for our clients. Our goal is to help you look and feel your best, with treatments tailored to your individual needs.</p>
-            <h3>Our Mission</h3>
-            <p>Our mission is to provide exceptional aesthetic services in a comfortable and welcoming environment. We strive to enhance your natural beauty with safe and effective treatments, helping you achieve your aesthetic goals with confidence.</p>
-            <h3>Our Team</h3>
-            <p>Our team of highly trained professionals includes licensed aestheticians, certified nurses, and experienced doctors who are dedicated to delivering the best possible care. We stay up-to-date with the latest advancements in aesthetic medicine to ensure that you receive the highest quality treatments available.</p>
-            <h3>Why Choose Us?</h3>
-            <ul>
-                <li>Personalized care and attention</li>
-                <li>State-of-the-art technology</li>
-                <li>Highly trained and experienced professionals</li>
-                <li>Comfortable and welcoming environment</li>
-                <li>Commitment to safety and excellence</li>
-            </ul>
+            <p>Project Pro is a team of experienced professionals dedicated to providing top-quality home improvement services. With years of expertise, we take pride in delivering exceptional results that exceed our clients' expectations.</p>
+        </div>
+    </section>
+
+    <section id="other-services">
+        <div class="container">
+            <h2>Other Services Recommendations</h2>
+            <p>Is the service you need not listed? Here are our trusted recommendations.</p>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Roofing</h3>
+                    <p>Contact Information:</p>
+                    <p>Email: roofing@example.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+                <div class="service">
+                    <h3>Lawn Services</h3>
+                    <p>Contact Information:</p>
+                    <p>Email: lawn@example.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+                <div class="service">
+                    <h3>House Cleanings</h3>
+                    <p>Contact Information:</p>
+                    <p>Email: cleaning@example.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+                <div class="service">
+                    <h3>Mortgage Loans</h3>
+                    <p>Contact Information:</p>
+                    <p>Email: loans@example.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Jade's. All rights reserved.</p>
+            <p>&copy; 2024 Project Pro. All rights reserved.</p>
             <nav>
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
