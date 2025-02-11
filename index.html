@@ -3,211 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jovan - Catholic Merchandise</title>
+    <title>Just Jesus Apparel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
             color: #333;
         }
+        /* Header */
         header {
-            background: #6a4b91;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #222;
+            color: #fff;
+            padding: 15px 20px;
+        }
+        .logo img {
+            height: 50px;
         }
         nav ul {
             list-style: none;
-            padding: 0;
             display: flex;
-            justify-content: center;
         }
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 16px;
         }
+        /* Hero Section */
         .hero {
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-align: center;
+            padding: 80px 20px;
+            background: url('https://source.unsplash.com/1600x900/?jesus,cross') no-repeat center center/cover;
             color: white;
-            font-size: 30px;
-            font-weight: bold;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
+        .hero h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        .btn {
-            background: #6a4b91;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-block;
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
         }
-        .btn:hover {
-            background: #503975;
-        }
-        /* Product Grid */
-        .product-grid {
+        /* Products */
+        .products {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
+            padding: 50px 20px;
         }
         .product {
             background: white;
-            padding: 15px;
-            margin: 10px;
+            margin: 15px;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 30%;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .product img {
-            width: 100%;
-            height: auto;
+            width: 200px;
             border-radius: 5px;
         }
-        /* Cart Section */
-        #cart-items {
-            list-style: none;
-            padding: 0;
+        .product h3 {
+            margin-top: 10px;
+        }
+        .product p {
+            color: #888;
+        }
+        .product button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product button:hover {
+            background: #0056b3;
+        }
+        /* Cart */
+        .cart {
+            padding: 50px;
+            text-align: center;
+        }
+        /* Checkout */
+        .checkout {
+            padding: 50px;
+            text-align: center;
         }
         /* Footer */
         footer {
-            text-align: center;
-            background: #6a4b91;
+            background: #222;
             color: white;
+            text-align: center;
             padding: 20px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">
-            <h1>Jovan - Catholic Merchandise</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo">
+        <img src="BB26F1D7-19A2-4DBF-B344-D9B9BEBBF87C.jpeg" alt="Just Jesus Apparel Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <h1>Faith Meets Fashion</h1>
-        <p>Wear Your Faith with Pride.</p>
-        <a href="#shop" class="btn">Shop Now</a>
-    </section>
+<section class="hero">
+    <h1>Just Jesus Apparel</h1>
+    <p>Wear Your Faith with Pride</p>
+</section>
 
-    <!-- SHOP -->
-    <section id="shop" class="container">
-        <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="shirt.jpg" alt="Faith T-Shirt">
-                <h3>Faith T-Shirt</h3>
-                <p>$24.99</p>
-                <button class="btn add-to-cart" data-name="Faith T-Shirt" data-price="24.99">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="hoodie.jpg" alt="Christian Hoodie">
-                <h3>Christian Hoodie</h3>
-                <p>$49.99</p>
-                <button class="btn add-to-cart" data-name="Christian Hoodie" data-price="49.99">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="jacket.jpg" alt="Faith Jacket">
-                <h3>Faith Jacket</h3>
-                <p>$59.99</p>
-                <button class="btn add-to-cart" data-name="Faith Jacket" data-price="59.99">Add to Cart</button>
-            </div>
-        </div>
-    </section>
+<section id="products" class="products">
+    <div class="product">
+        <img src="https://source.unsplash.com/400x400/?christian,tshirt" alt="T-Shirt">
+        <h3>Faith T-Shirt</h3>
+        <p>$25.00</p>
+        <button onclick="addToCart('Faith T-Shirt', 25)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://source.unsplash.com/400x400/?christian,hoodie" alt="Hoodie">
+        <h3>Cross Hoodie</h3>
+        <p>$45.00</p>
+        <button onclick="addToCart('Cross Hoodie', 45)">Add to Cart</button>
+    </div>
+</section>
 
-    <!-- ABOUT -->
-    <section id="about" class="container">
-        <h2>About Jovan</h2>
-        <p>Jovan is a faith-driven clothing brand that brings you high-quality apparel inspired by Catholic traditions. Our mission is to help you express your faith through fashion.</p>
-    </section>
+<section id="cart" class="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button onclick="checkout()">Proceed to Checkout</button>
+</section>
 
-    <!-- FAQ -->
-    <section id="faq" class="container">
-        <h2>Frequently Asked Questions</h2>
-        <p><strong>What payment methods do you accept?</strong> We accept credit cards, PayPal, Venmo, Cash App, Zelle, and cryptocurrency.</p>
-        <p><strong>How long does shipping take?</strong> Orders are shipped within 5-7 business days.</p>
-    </section>
+<section id="checkout" class="checkout">
+    <h2>Secure Checkout</h2>
+    <p>Select Payment Method</p>
+    <button>Credit Card</button>
+    <button>Venmo</button>
+    <button>Cash App</button>
+    <button>Zelle</button>
+    <button>Crypto</button>
+</section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <p>Email: support@jovan.com</p>
-    </section>
+<section id="about">
+    <h2>About Us</h2>
+    <p>Just Jesus Apparel is dedicated to spreading faith through fashion. Our mission is to inspire, uplift, and empower believers worldwide.</p>
+</section>
 
-    <!-- CART -->
-    <section id="cart" class="container">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: $<span id="total-price">0.00</span></p>
-        <button class="btn" onclick="checkout()">Checkout</button>
-    </section>
+<footer>
+    <p>&copy; 2025 Just Jesus Apparel | <a href="#">Privacy Policy</a></p>
+</footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Jovan. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        let cart = [];
-        function addToCart(name, price) {
-            cart.push({ name, price });
-            updateCart();
-        }
-        function updateCart() {
-            let cartCount = document.getElementById("cart-count");
-            cartCount.innerText = cart.length;
-            let cartItems = document.getElementById("cart-items");
-            cartItems.innerHTML = "";
-            let total = 0;
-            cart.forEach(item => {
-                let li = document.createElement("li");
-                li.textContent = `${item.name} - $${item.price}`;
-                cartItems.appendChild(li);
-                total += item.price;
-            });
-            document.getElementById("total-price").innerText = total.toFixed(2);
-        }
-        function checkout() {
-            alert("Proceeding to Checkout. Payments to be integrated.");
-        }
-        document.querySelectorAll(".add-to-cart").forEach(button => {
-            button.addEventListener("click", function() {
-                addToCart(this.dataset.name, parseFloat(this.dataset.price));
-            });
+<script>
+    let cart = [];
+    function addToCart(item, price) {
+        cart.push({ item, price });
+        updateCart();
+    }
+    function updateCart() {
+        let cartList = document.getElementById("cart-items");
+        let total = document.getElementById("cart-total");
+        cartList.innerHTML = "";
+        let sum = 0;
+        cart.forEach((product) => {
+            cartList.innerHTML += `<li>${product.item} - $${product.price}</li>`;
+            sum += product.price;
         });
-    </script>
+        total.innerText = sum.toFixed(2);
+    }
+    function checkout() {
+        alert("Proceeding to secure checkout...");
+    }
+</script>
 
 </body>
 </html>
